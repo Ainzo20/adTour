@@ -1,0 +1,129 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    padding: 14px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 80vh;
+    background-color: rgb(247, 247, 247);
+    border-radius: 8px;
+}
+
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: right 15rem;
+    flex: 1;
+}
+
+.image {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: flex-start; /* Aligns items at the top */
+    align-items: center;
+    flex: 1;
+    /* background-color: lightgray; */
+    position: relative; /* Ensures position of title and subtitle */
+}
+
+.title {
+    font-size: 2rem; /* Large font size for emphasis */
+    font-weight: bold; /* Bold text */
+    color: rgb(3, 173, 240); /* Matches the blue tone */
+    margin-bottom: 0.5rem; /* Less space between title and subtitle */
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: rgb(3, 173, 240); /* Matches the blue tone */
+    margin-bottom: 1.5rem; /* Adds space between subtitle and form */
+    text-align: center;
+}
+
+.form {
+    width: 100%;
+    height: auto; /* Allows form height to fit content */
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+    justify-content: flex-start; /* Align form elements to the top */
+    gap: 1rem;
+}
+
+.formGroup {
+    width: 60%; 
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;  
+}
+
+.label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.input {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc; /* Subtle border */
+    font-size: 1rem;
+    outline: none;
+    background-color: white;
+    color: transparent;
+    color: #333; /* Ensure text color is dark */
+    transition: all 0.3s ease;
+}
+
+/* Focus styles */
+.input:focus {
+    border-color: #00aeff; /* Highlight border */
+    box-shadow: 0 0 8px rgba(16, 140, 255, 0.3); /* Soft glow */
+}
+
+/* Placeholder styles */
+.input::placeholder {
+    color: #888; /* Subtle placeholder color */
+    font-style: italic;
+}
+.submitButton {
+    padding: 0.75rem 1.5rem;
+    background-color: rgb(3, 173, 240); /* Default background color */
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    
+    /* Set up the default background image (initially hidden) */
+    background-image: none; /* No background image by default */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .submitButton:hover {
+    box-shadow: 0 0 8px rgba(19, 180, 255, 0.3); /* Soft glow */
+    border: 1px solid #7ff5fd;
+    /* Change background image when hovered */
+    background-image: url('../../assets/Login/trave.jpg'); /* Add your image path here */
+    color: #333;
+    font-size: bold;
+  }
+  
+.errorItem{
+    color: red;
+}
