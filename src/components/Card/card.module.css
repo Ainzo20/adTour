@@ -39,7 +39,7 @@
     margin-top: 10px;
     width: 100%; /* Ensure description takes full width */
     font-weight: 400;
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Roboto';
 }
 
 .image {
