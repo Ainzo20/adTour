@@ -103,6 +103,9 @@ const LoginPage: React.FC = () => {
           className={styles.input}
         />
       </div>
+      <div>
+        <a href="" className={styles.signUp}>Already have an account?</a>
+      </div>
 
       {/* Submit Button */}
       <button type="submit" className={styles.submitButton}>

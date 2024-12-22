@@ -7,18 +7,19 @@
     height: 80vh;
     background-color: rgb(247, 247, 247);
     border-radius: 8px;
+    flex-wrap: wrap; /* Allows content to wrap on smaller screens */
 }
 
 .imageContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: right 15rem;
+    padding-right: 15rem;
     flex: 1;
+    min-width: 300px; /* Prevents the image from becoming too small */
 }
 
 .image {
-    display: flex;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -31,8 +32,8 @@
     justify-content: flex-start; /* Aligns items at the top */
     align-items: center;
     flex: 1;
-    /* background-color: lightgray; */
     position: relative; /* Ensures position of title and subtitle */
+    min-width: 300px; /* Ensures form doesn't shrink too much */
 }
 
 .title {
@@ -62,10 +63,10 @@
 }
 
 .formGroup {
-    width: 60%; 
+    width: 60%;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;  
+    gap: 0.5rem;
 }
 
 .label {
@@ -97,6 +98,14 @@
     color: #888; /* Subtle placeholder color */
     font-style: italic;
 }
+.signUp{
+    color: #00aeff;
+    font-size: small;
+    padding-left: 10rem;
+}
+.signUp:focus{
+    color: #333;
+}
 .submitButton {
     padding: 0.75rem 1.5rem;
     background-color: rgb(3, 173, 240); /* Default background color */
@@ -109,21 +118,101 @@
     overflow: hidden;
     transition: all 0.3s ease; /* Smooth transition for all properties */
     
-    /* Set up the default background image (initially hidden) */
     background-image: none; /* No background image by default */
     background-size: cover;
     background-position: center;
-  }
-  
-  .submitButton:hover {
+}
+
+.submitButton:hover {
     box-shadow: 0 0 8px rgba(19, 180, 255, 0.3); /* Soft glow */
     border: 1px solid #7ff5fd;
-    /* Change background image when hovered */
     background-image: url('../../assets/Login/trave.jpg'); /* Add your image path here */
     color: #333;
     font-size: bold;
-  }
-  
-.errorItem{
+}
+
+.errorItem {
     color: red;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        height: auto; /* Adjust height on smaller screens */
+    }
+
+    .imageContainer {
+        padding-right: 0;
+        margin-bottom: 2rem; /* Space between image and form */
+    }
+
+    .formContainer {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .formGroup {
+        width: 80%; /* Adjust form group width */
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .submitButton {
+        width: 100%; /* Make button full width on small screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .imageContainer {
+        width: 100%;
+        height: 250px; /* Reduce image size */
+        margin-bottom: 2rem; /* Space between image and form */
+    }
+
+    .formGroup {
+        width: 90%; /* Adjust form group width */
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 13px;
+    }
+
+    .submitButton {
+        width: 50%; /* Make button full width */
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .subtitle {
+        font-size: 12px;
+    }
+
+    .formGroup {
+        width: 90%;
+    }
+
+    .submitButton {
+        font-size: 0.5rem;
+        width: 50%;
+    }
 }
