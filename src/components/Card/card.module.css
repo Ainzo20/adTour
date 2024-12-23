@@ -9,9 +9,9 @@
     background-color: transparent;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align items at the start of the container */
-    align-items: flex-start; /* Align the content (text) to the left */
-    text-align: left; /* Ensure text is aligned to the left */
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    text-align: left; 
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     overflow: hidden;
@@ -19,8 +19,8 @@
 }
 
 .cardContainer:hover {
-    transform: scale(1.05); /* Slight scale effect on hover */
-    border-color: aqua; /* Change border color on hover */
+    transform: scale(1.05); 
+    border-color: aqua;
 }
 
 .name {
@@ -28,24 +28,24 @@
     color: #000000;
     font-weight: bold;
     margin-top: 10px;
-    text-align: left; /* Align text to the left */
-    width: 100%; /* Ensure the name takes the full width available */
+    text-align: left; 
+    width: 100%; 
 }
 
 .description {
     font-size: 0.9rem;
     color: #202020;
-    text-align: left; /* Left align the description */
+    text-align: left;
     margin-top: 10px;
-    width: 100%; /* Ensure description takes full width */
+    width: 100%; 
     font-weight: 400;
     font-family: 'Roboto';
 }
 
 .image {
-    height: 200px; /* Adjusted to a more fitting size for the image */
-    width: 100%; /* Make image width 100% of the card's width */
-    object-fit: cover; /* Ensure the image maintains aspect ratio and fills the space */
+    height: 200px;
+    width: 100%; 
+    object-fit: cover; 
     border-radius: 8px;
     transition: transform 0.3s ease;
 }

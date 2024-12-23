@@ -1,0 +1,27 @@
+.header{
+display: flex;
+flex-direction:row;
+width: 90rem;
+background-color: black;
+overflow: hidden;
+
+}
+.navbar{
+
+}
+.logoContainer{
+
+}
+.logo{
+
+}
+.navelementsContainer{
+    display: flex;
+    flex-direction: column;
+}
+.navElements{
+list-style: none;
+}
+.footer{
+
+}

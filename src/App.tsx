@@ -1,15 +1,13 @@
-import './App.css'
-import Card from './components/Card/card'
-import LoginPage from './pages/LoginPage/LoginPage'
+import './App.css';
+import NavBar from './components/NavBar/navBar';
+import LoginPage from './pages/LoginPage/LoginPage';
 
 function App() { 
 
   return (
     <>
+    <NavBar></NavBar>
     {/* <LoginPage/> */}
-    <Card name={'karls'} imageUrl={'src/assets/Login/trave.jpg'} description={'the only place to be'} onClick={function (): void {
-        throw new Error('Function not implemented.')
-      } }></Card>
     </>
   )
 }
