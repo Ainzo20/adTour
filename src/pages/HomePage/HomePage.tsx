@@ -16,7 +16,7 @@ const HomePage: React.FC = () => {
       setCurrentIndex((prevIndex) => {
         return (prevIndex + 1) % Math.ceil(sites.length / itemsPerPage);
       });
-    }, 3000); // 3000ms = 3 seconds
+    }, 3000); 
 
     return () => clearInterval(interval); // Cleanup interval on unmount
   }, []);
