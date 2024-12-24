@@ -1,27 +1,51 @@
-.header{
-display: flex;
-flex-direction:row;
-width: 90rem;
-background-color: black;
-overflow: hidden;
-
-}
-.navbar{
-
-}
-.logoContainer{
-
-}
-.logo{
-
-}
-.navelementsContainer{
+/* navBar.module.css */
+.container {
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+  }
+.logoContainer{
+    padding-right: 900px;
 }
-.navElements{
-list-style: none;
-}
-.footer{
-
-}
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:transparent; /* Transparent black background */
+    padding: 10px 0;
+    z-index: 10;
+  }
+  
+  .navbarItem {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 20px; /* Horizontal spacing between items */
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Add hover effect */
+  .navbarItem:hover {
+    color: #ffcc00; /* Hover color (e.g., gold) */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+  
+  .navbarItem:active {
+    transform: scale(0.95); /* Slightly shrink on click */
+  }
+  
+  .content {
+    margin-top: 80px; /* Add some space for the navbar */
+    text-align: center;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+  }
+  

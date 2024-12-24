@@ -1,0 +1,15 @@
+.background-wrapper {
+  position: relative;
+  width: 100%;
+  height: 1vh;
+  overflow: hidden; /* Prevents scrolling */
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Make the image take the full width */
+  height: 60vh; /* Ensure the image covers full height */
+  object-fit: cover; /* Make sure the image maintains its aspect ratio */
+}

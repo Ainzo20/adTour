@@ -1,0 +1,63 @@
+[
+    { "id":"1abc",
+      "name": "Mont Ngaoundere",
+      "description": "Le mont Ngaoundéré est une montagne située dans la région de l'Adamaoua au Cameroun, célèbre pour ses paysages magnifiques et son atmosphère paisible.",
+      "imageUrl": "assets/Mont.jpeg",
+      "rating": "5"
+    },
+    { "id":"1abd",
+      "name": "Dja Faunal Reserve",
+      "description": "La réserve faunique de Dja est une grande zone protégée au Cameroun, connue pour sa biodiversité exceptionnelle et ses forêts denses.",
+      "imageUrl": "assets/cam.jpg",
+      "rating": "4.5"
+    },
+    { "id":"1acc",
+      "name": "Lake Nyos",
+      "description": "Le lac Nyos est un lac volcanique situé dans le Nord-Ouest du Cameroun, connu pour la tragédie de 1986 où un dégazage soudain a causé de nombreuses pertes humaines.",
+      "imageUrl": "assets/trave.jpg",
+      "rating": "4"
+    },
+    { "id":"2abc",
+      "name": "Waza National Park",
+      "description": "Le parc national de Waza, situé dans le nord du Cameroun, est un parc faunique célèbre pour ses populations d'éléphants, de lions et de girafes.",
+      "imageUrl": "assets/trave.jpg",
+      "rating": "4.8"
+    },
+    { "id":"1aec",
+      "name": "Kribi Beach",
+      "description": "La plage de Kribi est une destination balnéaire populaire au Cameroun, connue pour ses plages de sable fin et ses eaux turquoise.",
+      "imageUrl": "assets/trave.jpg",
+      "rating": "4.7"
+    },
+    { "id":"1bbc",
+      "name": "Buea",
+      "description": "Buea, située au pied du mont Cameroun, est une ville historique, connue pour ses plantations de thé et sa vue spectaculaire sur le volcan.",
+      "imageUrl": "assets/trave.jpg",
+      "rating": "4.6"
+    },
+    { "id":"2bc",
+      "name": "Douala",
+      "description": "Douala est la plus grande ville et le principal port du Cameroun, avec une culture vibrante et une vie nocturne animée.",
+      "imageUrl": "assets/trave.jpg",
+      "rating": "4.3"
+    },
+    {  "id":"1nbc",
+      "name": "Yaoundé",
+      "description": "Yaoundé, la capitale du Cameroun, est une ville dynamique avec une riche histoire et une scène culturelle florissante.",
+      "imageUrl": "assets/trave.jpg",
+      "rating": "4.2"
+    },
+    {  "id":"1aben",
+      "name": "Mount Cameroon",
+      "description": "Le mont Cameroun est un volcan actif et le plus haut sommet du pays, un lieu populaire pour les randonnées et les courses de montagne.",
+      "imageUrl": "assets/trave.jpg",
+      "rating": "5"
+    },
+    { "id":"22abc",
+      "name": "Limbe Botanic Garden",
+      "description": "Le jardin botanique de Limbe est un jardin de 50 hectares offrant une grande variété de plantes et une vue magnifique sur l'océan Atlantique.",
+      "imageUrl": "assets/Naruto.png",
+      "rating": "4.5"
+    }
+  ]
+  

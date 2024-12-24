@@ -12,7 +12,7 @@ const Card: React.FC<CardProps> = ({
   imageUrl,
   name,
   description,
-  onClick,
+  onClick,  
 }) => {
   return (
     <div className={styles.cardContainer} onClick={onClick}>

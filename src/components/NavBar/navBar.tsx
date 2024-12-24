@@ -1,29 +1,24 @@
 import React from 'react';
-import styles from "./navBar.module.css";
+import styles from './navBar.module.css';
+import h from "../../assets/Login/cam.jpg";
+import Background from '../BackgroundImage/backGroundImage';
 
-const NavBar:React.FC=()=>{
-    return(
-        <>
-        <header className={styles.header}>
-        <nav className={styles.navbar}>
-            <div className={styles.logoContainer}>
-                <p className={styles.logo}>AdTrip</p>
-            </div>
-            <div className={styles.navelementsContainer}>
-                <ul className={styles.navElements}>
-                    <li><a href="Map">Map</a></li>
-                    <li><a href="Sites">Sites</a></li>
-                    <li><a href="Events">Events</a></li>
-                    <li><a href="#Contact">Contact us</a></li>
-                </ul>
-            </div>
-        </nav>
-        </header>
+const NavBar: React.FC = () => {
+  return (
+    <>{/* Fixed Navbar */}
+    <nav className={styles.navbar}>
+      <div className={styles.logoContainer}><a className={styles.navbarItem}href="/">AdTrip</a></div>
+      <div className={styles.navbarItem}>Home</div>
+      <div className={styles.navbarItem}>About</div>
+      <div className={styles.navbarItem}>Contact</div>
+    </nav>
 
-        <footer className={styles.footer}>
+    {/* Main Content */}
+    <div className={styles.content}>
+      <h1>Static Background with Navbar</h1>
+      <p>This is a sample page with a static background image set in the TSX file.</p>
+    </div></>
+  );
+};
 
-        </footer>
-        </>
-    );
-}
 export default NavBar;

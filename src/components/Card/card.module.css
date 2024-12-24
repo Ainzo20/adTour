@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 .cardContainer {
-    border: 1px solid #e5e5e5;
-    border-radius: 8px;
     height: 100%;
     width: 240px;
     padding: 20px;
@@ -51,5 +49,5 @@
 }
 
 .cardContainer:hover .image {
-    transform: scale(1.1); /* Slight scale effect on hover to enlarge the image */
+    transform: scale(1.0); /* Slight scale effect on hover to enlarge the image */
 }
