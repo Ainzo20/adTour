@@ -1,40 +1,57 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    z-index: 0;
-    width: 100%;
-    height: fit-content;
-  }
-  
-  .title {
-    padding-top: 26px;
-    font-size: 2rem;
-    color: black;
-    margin-bottom: 20px;
-    align-self: flex-start;
-  }
-  
-  .sitesContainer {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-  
-  .sites {
-    display: flex;
-    gap: 20px;
-    width: 100%;
-    max-width: 1200px;
-    margin-top: 20px;
-    overflow: hidden; /* Hide horizontal scrollbar */
-    position: relative; /* Ensure positioning is correct */
-    transition: transform 3s ease-in-out; /* Slower transition, making it smooth and slow */
-  }
-  
-  .cardContainer {
-    width: 250px;
-    flex-shrink: 0; /* Prevent cards from shrinking */
-  }
-  
+
+.mainContainer{
+ margin-bottom:32px ;
+
+}
+.titleContainer{
+  display: flex;
+  flex:1;
+  justify-content: start;
+  max-height: 100px;
+  min-width: 220px;
+  width: 220px;
+  margin-top: 26px;
+  left:2em;
+  position: absolute;
+  padding-top:360px;
+  width: 16%
+}
+.title{
+  color: black;
+  position: relative;
+}
+.sitesContainer{
+  margin-top: 496px;
+  display: flex;
+  overflow:hidden;
+  width: 100%;
+}
+.navigationContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.navButton {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.navButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.cardWrapper {
+  flex: 0 0 25%; /* Adjust based on how many items are shown (100% / 4 = 25%) */
+  transition: transform 0.5s ease-in-out; /* Smooth animation for sliding */
+}
+
+.animate {
+  transition: transform 0.5s ease-in-out; /* Match this with JavaScript timeouts */
+}
+

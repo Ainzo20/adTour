@@ -4,6 +4,7 @@
     flex-direction: column;
     height: 100vh;
     justify-content: space-between;
+    overflow: none;
   }
 .logoContainer{
     padding-right: 900px;
@@ -39,13 +40,5 @@
   
   .navbarItem:active {
     transform: scale(0.95); /* Slightly shrink on click */
-  }
-  
-  .content {
-    margin-top: 80px; /* Add some space for the navbar */
-    text-align: center;
-    color: white;
-    padding: 20px;
-    font-size: 20px;
   }
   

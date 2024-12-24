@@ -1,59 +1,90 @@
-import React, { useState, useEffect } from 'react';
-import NavBar from '../../components/NavBar/navBar';
-import Background from '../../components/BackgroundImage/backGroundImage';
+import React, { useState } from "react";
+import NavBar from "../../components/NavBar/navBar";
+import Background from "../../components/BackgroundImage/backGroundImage";
 import h from "../../assets/Login/cam.jpg";
 import styles from "./HomePage.module.css";
 import sites from "../../data/topsites.json";
-import Card from '../../components/Card/card';
+import Card from "../../components/Card/card";
 
 const HomePage: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const itemsPerPage = 4;
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
-  // Function to handle automatic sliding every 3 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => {
-        return (prevIndex + 1) % Math.ceil(sites.length / itemsPerPage);
-      });
-    }, 3000); 
+  // circular slider
+  const getVisibleSites = () => {
+    const extendedSites = [...sites, ...sites]; //Duplicate of sites for looping
+    const startIndex = currentIndex;
+    return extendedSites.slice(startIndex, startIndex + itemsPerPage);
+  };
 
-    return () => clearInterval(interval); // Cleanup interval on unmount
-  }, []);
+  const visibleSites = getVisibleSites();
 
-  // Function to get the current set of cards to display
-  const getCurrentItems = () => {
-    const startIndex = currentIndex * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
-    return sites.slice(startIndex, endIndex);
+  const handleNext = () => {
+    if (!isAnimating) {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % sites.length);
+        setIsAnimating(false);
+      }, 500); // Match CSS animation duration
+    }
+  };
+
+  const handlePrev = () => {
+    if (!isAnimating) {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setCurrentIndex(
+          (prevIndex) =>
+            (prevIndex - 1 + sites.length) % sites.length // Handle negative index
+        );
+        setIsAnimating(false);
+      }, 500);
+    }
   };
 
   return (
     <>
       <div className={styles.mainContainer}>
-        <Background image={h}>
+        <div className={styles.NavBarContainer}>
           <NavBar />
-        </Background>
-      </div>
-      {/* Card implementation */}
-      <section className={styles.container}>
-        <h2 className={styles.title}>Top sites</h2>
-        <div className={styles.sitesContainer}>
-          <div className={styles.sites}>
-            {getCurrentItems().map((site) => (
-              <Card
-                key={site.id}
-                imageUrl={site.imageUrl}
-                name={site.name}
-                description={site.description}
-                onClick={() => {
-                  console.log(`${site.name} card clicked!`);
-                }}
-              />
-            ))}
-          </div>
         </div>
+        <div className={styles.backgroundImageContainer}>
+          <Background image={h} />
+        </div>
+      </div>
+      <div className={styles.titleContainer}>
+        <h2 className={styles.title}>Top Destinations</h2>
+      </div>
+      <section
+        className={`${styles.sitesContainer} ${
+          isAnimating ? styles.animate : ""
+        }`}
+      >
+        {visibleSites.map((site, index) => (
+          <div
+            key={index} /* Unique index for seamless looping */
+            className={styles.cardWrapper}
+          >
+            <Card
+              imageUrl={site.imageUrl}
+              name={site.name}
+              description={site.description}
+              onClick={() => {
+                console.log(`Clicked on ${site.name}`);
+              }}
+            />
+          </div>
+        ))}
       </section>
+      <div className={styles.navigationContainer}>
+        <button className={styles.navButton} onClick={handlePrev}>
+          
+        </button>
+        <button className={styles.navButton} onClick={handleNext}>
+          
+        </button>
+      </div>
     </>
   );
 };
