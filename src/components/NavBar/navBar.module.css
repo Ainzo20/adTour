@@ -42,3 +42,17 @@
     transform: scale(0.95); /* Slightly shrink on click */
   }
   
+/* This class will be added when scrolled */
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.8); /* Darken the navbar */
+}
+
+/* .navbarItem styles */
+.navbarItem {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 20px;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}

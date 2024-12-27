@@ -5,3 +5,21 @@
   text-align: center;
 }
 
+.Slider,
+.slick-prev,
+.slick-next {
+  z-index: 10;
+}
+
+/* Styling for the previous and next arrows */
+.slick-prev,
+.slick-next {
+  color: black !important; /* Force the color change */
+  font-size: 24px; /* Optional: Adjust the size of the arrows */
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black !important; /* Target the arrow icons (using !important to ensure it takes priority) */
+}
+

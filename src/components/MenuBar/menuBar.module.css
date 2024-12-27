@@ -1,0 +1,35 @@
+
+  
+  .menuItems {
+    list-style-type: none;
+    display: flex;
+    gap: 30px; /* Space between items */
+    justify-items: end;
+  }
+  
+  .item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .item a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Roboto',sans-serif;
+  }
+  
+  .icon {
+    font-size: 20px;
+    color: #726e6e;
+    transition: color 0.3s;
+  }
+  
+  .item a:hover .icon,
+  .item a:hover {
+    color: #ffa600;
+  }
+  

@@ -5,53 +5,32 @@
 }
 .titleContainer{
   display: flex;
-  flex:1;
   justify-content: start;
-  max-height: 100px;
-  min-width: 220px;
   width: 220px;
-  margin-top: 26px;
-  left:2em;
+  margin-top: -1%;
+  left:12rem;
+  color: aqua;
   position: absolute;
-  padding-top:360px;
-  width: 16%
+  width: 8%
 }
 .title{
   color: black;
   position: relative;
 }
-.sitesContainer{
-  margin-top: 496px;
-  display: flex;
-  overflow:hidden;
-  width: 100%;
+.section{
+  margin-top:50px;
+  color: black;
 }
-.navigationContainer {
+.cardWrapper{
+  padding: 0px 10px;
+  max-width: 450px;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  align-items: center;
 }
-
-.navButton {
-  padding: 10px 20px;
-  margin: 0 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
+.menuBar{
+ position: relative;
+ padding-top: 34%;
+ justify-self: end;
+ left: -5rem;
 }
-
-.navButton:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-.cardWrapper {
-  flex: 0 0 25%; /* Adjust based on how many items are shown (100% / 4 = 25%) */
-  transition: transform 0.5s ease-in-out; /* Smooth animation for sliding */
-}
-
-.animate {
-  transition: transform 0.5s ease-in-out; /* Match this with JavaScript timeouts */
-}
-
